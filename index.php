@@ -10,16 +10,16 @@
 <?php
 
 
-if (isset($_POST) && ($_SERVER['HTTP_X_HTTP_METHOD'] == 'POST'))
+if (isset($_GET) && ($_SERVER['HTTP_X_HTTP_METHOD'] == 'GET'))
 {
-  $data = $_POST;
-  $http_data = http_build_query(array($_POST));
+  $data = $_GET;
+  $http_data = http_build_query(array($_GET));
   $status = array(
             200 => 'OK');
   http_response_code(200);
   $opts = array(
     'http'=>array(
-    'method'=>"POST",
+    'method'=>"GET",
     'header'=>"Accept-language: en\r\n" .
               "Cookie: foo=bar\r\n".
               "Content-type: application/json\r\n",
