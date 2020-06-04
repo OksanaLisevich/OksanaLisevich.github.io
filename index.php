@@ -36,6 +36,12 @@ $fp = fopen($url, 'r', false, $context);
 fpassthru($fp);
 fclose($fp);
 }
+	
+	echo $context;
+	echo $opts;
+	echo $http_data;
+	echo $data;
+	
 
 ?>
 
